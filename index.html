@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>components</title>
+    <script type="text/javascript" src="vendors/angular.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <h1>Mu Cohort</h1>
+
+    <mu-cohort first="zeng" last="her"></mu-cohort>
+    <mu-cohort first="hannah" last="springer"></mu-cohort>
+    <mu-cohort first="brandon" last="gladen"></mu-cohort>
+    <mu-cohort first="samantha" last="klein"></mu-cohort>
+
+
+
+    <script>
+
+    var myApp = angular.module('myApp', []);
+      myApp.directive('muCohort', function() {
+        return {
+          scope:{},
+          restrict: 'E',
+          link: function(scope,element,attribute){
+            scope.cohortMember = attribute.first + ' ' + attribute.last
+          },
+          template:"<h3>{{cohortMember}}</h3>"
+        }
+      })
+
+
+
+
+    </script>
+
+  </body>
+</html>

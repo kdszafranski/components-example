@@ -1,0 +1,37 @@
+<!--i put this index file in a new project and used the component to display it on DOM-->
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>components</title>
+    <script type="text/javascript" src="vendors/angular.min.js"></script>
+    <script type="text/javascript" src="modules/mu.js">
+
+    </script>
+
+
+
+
+  </head>
+  <body>
+    <h1>Mu Cohort</h1>
+    <mu-cohort first="pat 'mongoose'" last="kahnke"></mu-cohort>
+    <mu-cohort first="adam" last="hefnider"></mu-cohort>
+    <mu-cohort first="quinn" last="nelson"></mu-cohort>
+    <mu-cohort first="noah" last="winden"></mu-cohort>
+
+
+
+    <script>
+
+    var myApp = angular.module('myApp', ['mu']);
+
+
+
+
+
+    </script>
+
+  </body>
+</html>
